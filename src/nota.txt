@@ -1,0 +1,5 @@
+/components = componentes chicos, por ejemplo Header (Solo imagen y enlaces)
+/containers = componentes grandes, por ejemplo Header (Imagen, rutas de navegacion, autentificacion)
+/pages = Son las vistas, por ejemplo Home.js, About.js. Categories.js
+
+Hooks => funcionalidades adicionales

@@ -1,0 +1,19 @@
+$primary-100:#00A896;
+$primary-200:#008b7a;
+$primary-300:#09554c;
+$accent-100:#FF6B6B;
+$accent-200:#8f001a;
+$text-100:#333333;
+$text-200:#5c5c5c;
+$bg-100:rgb(242, 239, 233);
+$bg-200:#e8e5df;
+$bg-300:#bfbdb7;
+
+// Encabezado: $primary-100, $primary-200   -> Header
+// Menú: $primary-200, $primary-300         -> NavBar con su hover
+// Botones: $primary-300, $accent-200   -> Botones de <button>
+// Enlaces: $accent-100, $primary-100   -> Enlaces de footer
+// Elementos de llamada a la acción: $accent-200, $primary-100  -> <button>
+// Texto de párrafos y listas: $text-100    
+// Fondo: $bg-100, $bg-200, $bg-300     -> Fondo del main / section
+  
