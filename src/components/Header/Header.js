@@ -18,7 +18,8 @@ const Header = () => {
             <ul id="submain">
               <li><Link to="/Hooks/UseState" class="submain-link">Contador</Link></li>
               <li><Link to="/Hooks/UseEffect" class="submain-link">Interruptor</Link></li>
-              <li><Link to="/Hooks/UseForms" class="submain-link">useForms</Link></li>
+              <li><Link to="/Hooks/UseForms" class="submain-link">Temporizador</Link></li>
+              <li><Link to="/Hooks/ContadorV2" class="submain-link">Contador v2</Link></li>
             </ul>
           </li>
           <li><Link to="" class="main-link">Renderizado de API</Link></li>

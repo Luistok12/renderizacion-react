@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import '../UseEffect/UseEffect.scss'
 
 const UseEffect = () => {
@@ -14,6 +14,7 @@ const UseEffect = () => {
 
     return (
         <div className="interruptor">
+            <h1>Interruptor con imagenes de Google fonts</h1>
             <div id="buttons">
                 <button class="btn" onClick={encender}>Encender</button>
                 <button class="btn" onClick={apagar}>Apagar</button>
