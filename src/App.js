@@ -2,26 +2,28 @@ import './App.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import AppRouter from './routes/router';
-
+import { useTheme } from './context/ThemeContext';
 
 function App() {
 
+  const { isDarkMode } = useTheme();
+
   return (
-    <div className="App">
+      <div className="App">
+
         <Header />
 
-        <div id="contenido">
+        <div className={`contenido ${isDarkMode ? 'contenido-dark' : ''}`}>
           <AppRouter />
           {/* Como router-view */}
         </div>
 
-      <Footer />
-
-    </div >
-  );
+        <Footer />
+      </div>
+      );
 }
 
-export default App;
+      export default App;
 
 // Para realizar push al repositorio de la pagina GitHub
 // git init

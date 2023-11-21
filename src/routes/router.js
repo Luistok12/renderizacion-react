@@ -5,6 +5,7 @@ import UE from '../pages/UseEffect/UseEffect';
 import UF from '../pages/UseForms/UseForms';
 import Hooks from '../pages/Hooks/Hooks';
 import UR from '../pages/UseReducer/UseReducer';
+import UC from '../pages/useContext/useContext';
 
 const AppRouter = () => {
     return (
@@ -16,7 +17,7 @@ const AppRouter = () => {
             <Route path="/Hooks/UseEffect" Component={UE} />
             <Route path="/Hooks/UseForms" Component={UF} />
             <Route path="/Hooks/ContadorV2" Component={UR} />
-
+            <Route path="/Hooks/Contexto" Component={UC} />
         </Routes>
     );
 }

@@ -1,9 +1,12 @@
-import React from "react";
 import './Footer.scss';
+import { useTheme } from "../../context/ThemeContext";
 
 const Footer = () => {
+
+    const { isDarkMode } = useTheme();
+
     return (
-        <footer>
+        <footer className={`footer ${isDarkMode ? 'dark-mode' : ''}`}>
             <p id="derechos">
                 Derechos Reservados
             </p>

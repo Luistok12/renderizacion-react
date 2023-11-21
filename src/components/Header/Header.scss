@@ -1,6 +1,6 @@
 @import '../../styles/light-mode.scss';
 
-header {
+.header {
     background-color: $primary-100;
     color: $text-100;
     box-shadow: 0px 7px 14px; // hor - vert - desenfoque - color (default = negro)
@@ -75,7 +75,7 @@ header {
 
                 >.main-link {
                     border-radius: 10px;
-                    padding-bottom: 175px;
+                    padding-bottom: 215px;
                     transition: all .5;
                     // animation-name: mainSlice;
                     // animation-duration: .5s;
@@ -86,7 +86,7 @@ header {
                     display: block;
                     position: absolute;
 
-                     .submain-link {
+                    .submain-link {
                         color: #fff;
                         transition: all 1s;
                         // animation-name: mainText;
@@ -100,6 +100,33 @@ header {
             }
         }
     }
+}
+
+.dark-mode {
+    background-color: rgb(49, 49, 49);
+    color: #fff;
+    box-shadow: 0px 7px 14px #fff;
+
+    nav #main li {
+
+        .main-link {
+            background-color: rgb(1, 1, 150);
+            color: #fff;
+
+            &:hover {
+                background-color: rgb(19, 19, 202);
+            }
+        }
+
+        #submain li .submain-link {
+
+            &:hover {
+                background-color: rgb(19, 19, 202);
+            }
+        }
+    }
+
+    
 }
 
 // @keyframes mainSlice {

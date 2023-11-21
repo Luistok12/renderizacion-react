@@ -16,8 +16,16 @@ body{
   /* display: block; */
 }
 
-#contenido{
+.contenido{
   height:56.7vh;
   z-index: -1;
   /* border: 1px solid black; */
+}
+
+.contenido-dark{
+  background-color: rgba(43, 42, 42, 0.7);
+  /* background-image: url(../src/logo.svg); */
+  background-blend-mode: overlay;   /* Fusiona background color con background image */
+  /* background-size: cover; */
+  color: #fff;
 }

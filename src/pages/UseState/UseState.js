@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import '../UseState/UseState.scss';
 
 const UseState = () => {
+    // Todos los Hooks deben ser declarados dentro del componente!
     const [numero, setNumero] = useState(0);
     const [contadorTotal, setContadorTotal] = useState(0);
     const [visibility, setVisibility] = useState(false);
