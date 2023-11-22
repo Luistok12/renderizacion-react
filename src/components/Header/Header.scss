@@ -5,7 +5,7 @@
     color: $text-100;
     box-shadow: 0px 7px 14px; // hor - vert - desenfoque - color (default = negro)
 
-    div {
+    #title-container {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -15,87 +15,144 @@
         }
     }
 
-    nav #main {
-        display: flex;
-        list-style: none;
-        justify-content: center;
+    nav {
+        display: block;
+        
+        #main {
+            display: flex;
+            list-style: none;
+            justify-content: center;
 
-        li {
-            margin: 12px;
+            li {
+                margin: 12px;
 
-            .main-link {
-                padding: 10px;
-                background-color: $primary-200;
-                cursor: pointer;
-                font-size: 18px;
-                border-radius: 10px;
-                text-decoration: none;
-                color: $text-100;
-
-                &:hover {
-                    background-color: $primary-300;
-                    color: #fff;
-                    transition: all .3s;
-                }
-            }
-
-        }
-
-        #submain-container {
-
-            .main-link {
-                padding: 10px 50px;
-            }
-
-            #submain {
-                position: absolute;
-                margin-top: 10px;
-                display: none;
-                list-style: none;
-
-                li {
-                    margin: 0;
-
-                    .submain-link {
-                        display: block;
-                        @extend .main-link;
-                        border-radius: 0;
-                        padding: 10px 49px;
-                        background-color: transparent; // aca
-                        color: transparent;
-                    }
-
-                    &:last-child .submain-link {
-                        border-radius: 0 0 10px 10px;
-                    }
-                }
-            }
-
-            &:hover {
-
-                >.main-link {
+                .main-link {
+                    padding: 10px;
+                    background-color: $primary-200;
+                    cursor: pointer;
+                    font-size: 18px;
                     border-radius: 10px;
-                    padding-bottom: 215px;
-                    transition: all .5;
-                    // animation-name: mainSlice;
-                    // animation-duration: .5s;
-                    // animation-fill-mode: forwards;
+                    text-decoration: none;
+                    color: $text-100;
+
+                    &:hover {
+                        background-color: $primary-300;
+                        color: #fff;
+                        transition: all .3s;
+                    }
+                }
+
+            }
+
+            #submain-container {
+
+                .main-link {
+                    padding: 10px 50px;
                 }
 
                 #submain {
-                    display: block;
                     position: absolute;
+                    margin-top: 10px;
+                    display: none;
+                    list-style: none;
 
-                    .submain-link {
-                        color: #fff;
-                        transition: all 1s;
-                        // animation-name: mainText;
+                    li {
+                        margin: 0;
+
+                        .submain-link {
+                            display: block;
+                            @extend .main-link;
+                            border-radius: 0;
+                            padding: 10px 49px;
+                            background-color: transparent; // aca
+                            color: transparent;
+                        }
+
+                        &:last-child .submain-link {
+                            border-radius: 0 0 10px 10px;
+                        }
+                    }
+                }
+
+                &:hover {
+
+                    >.main-link {
+                        border-radius: 10px;
+                        padding-bottom: 215px;
+                        transition: all .5;
+                        // animation-name: mainSlice;
                         // animation-duration: .5s;
-                        // animation-delay: .3s;
                         // animation-fill-mode: forwards;
-                        // color: transparent;
                     }
 
+                    #submain {
+                        display: block;
+                        position: absolute;
+
+                        .submain-link {
+                            color: #fff;
+                            transition: all 1s;
+                            // animation-name: mainText;
+                            // animation-duration: .5s;
+                            // animation-delay: .3s;
+                            // animation-fill-mode: forwards;
+                            // color: transparent;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:500px) {
+    header {
+
+        #main-icon {
+            padding: 10px;
+            background-color: $primary-200;
+            top: 16px;
+            right: 12px;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $primary-300;
+                transition: background-color .3s;
+            }
+
+            span {
+                height: 2px;
+                background-color: $text-100;
+                margin: 2px 0;
+                width: 12px;
+            }
+        }
+
+        nav {
+            // display: none;
+
+            #main {
+                display: flex;
+                flex-direction: column;
+
+                li {
+                    display: flex;
+                    border-radius: 0;
+
+                    .main-link {
+                        width: 100%;
+                        text-align: center;
+                        margin: -12px 0;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 20px;
+                    }
                 }
             }
         }
@@ -126,7 +183,7 @@
         }
     }
 
-    
+
 }
 
 // @keyframes mainSlice {

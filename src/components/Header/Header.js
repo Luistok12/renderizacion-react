@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState , useEffect } from "react";
 import "./Header.scss";
 import logo from "../../logo.svg";
 import { Link } from 'react-router-dom';
@@ -8,6 +8,27 @@ import { useTheme } from "../../context/ThemeContext";
 const Header = () => {
 
   const { isDarkMode } = useTheme();
+  const [showMenu,setShowMenu] = useState(true);
+  const [ pantallaMovil, setPantallaMovil] = useState(window.innerWidth <= 500);
+
+  useEffect(() => {
+    const cambioDeTamanio = () => {
+      setPantallaMovil( window.innerWidth > 500 );
+        if ( window.innerWidth > 500) {
+          // setShowMenu(true);
+          setPantallaMovil(false);
+        }
+        else {
+          setShowMenu(false);
+          setPantallaMovil(true);
+        }
+    };
+
+    window.addEventListener('resize', cambioDeTamanio);
+
+    return () => { window.removeEventListener('resize', cambioDeTamanio); }
+
+  }, [])
 
   return (
     <header className={`header ${isDarkMode ? 'dark-mode' : ''}`}>
@@ -16,7 +37,12 @@ const Header = () => {
         <h1>React!</h1>
         <img src={logo} alt="logo" />
       </div>
-      <nav>
+      <div id="main-icon" onClick={() => { setShowMenu(!showMenu) }}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      {(!pantallaMovil || (pantallaMovil && showMenu)) && <nav>
         <ul id="main">
           <li><Link to="/Home" class="main-link">Home</Link></li>
           <li id="submain-container"><Link to="/Hooks" class="main-link">Ejercicios</Link>
@@ -31,7 +57,7 @@ const Header = () => {
           <li><Link to="" class="main-link">Renderizado de API</Link></li>
           <li><Link to="" class="main-link">Renderizado de una base de datos</Link></li>
         </ul>
-      </nav>
+      </nav>}
     </header>
   )
 }
