@@ -4,9 +4,7 @@ import { useTheme } from '../../context/ThemeContext';
 import '../useContext/useContext.scss';
 
 const useContext = () => {
-  const { isDarkMode, toggleDarkMode} = useTheme();         // Uso del hook personalizado
-
-  // Deberia borrar el theme, ya que no aqui no se usa, pero lo dejo para que lo vea luego.
+  const { isDarkMode, toggleDarkMode} = useTheme();         // Uso del hook personalizado useContext
 
   return (
     // Renderizado del contexto!!

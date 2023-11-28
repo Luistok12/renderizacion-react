@@ -1,0 +1,22 @@
+form{
+    background-color: black;
+    padding: 80px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    margin: 10px;
+    
+    .date-container{
+        display: grid;
+        grid-template-columns: .5fr 1fr;
+        margin: 10px 0;
+    }
+
+    #buttons{
+        display: grid;
+        grid-template-columns: .4fr .4fr;
+        margin-top: 30px;
+        gap: 10px;
+        place-content: center;
+    }
+}

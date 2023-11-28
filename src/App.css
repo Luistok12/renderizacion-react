@@ -15,18 +15,21 @@ body{
   height: 100%;
 }
 
-.App {
+/* .App { */
   /* display: block; */
-}
+/* } */
 
 .contenido{
   height:56.7vh;
   z-index: -1;
+  overflow: auto;
+  /* margin: 5px 0; */
+  /* position: relative; */
   /* border: 1px solid black; */
 }
 
 .contenido-dark{
-  background-color: rgba(43, 42, 42, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   /* background-image: url(../src/logo.svg); */
   background-blend-mode: overlay;   /* Fusiona background color con background image */
   /* background-size: cover; */

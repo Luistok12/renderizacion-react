@@ -14,6 +14,7 @@ root.render(
       <ThemeProvider>
         <App />
       </ThemeProvider>
+      {/* ThemeProvider para darle un contexto global a toda la aplicacion. Contexto por ejemplo el modo oscuro! */}
     </BrowserRouter>
     {/* BrowserRouter debe envolver toda la app para asegurar que el enrutamiento funcione en toda la aplicacion */}
   </React.StrictMode>
