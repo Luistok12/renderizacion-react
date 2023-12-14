@@ -54,6 +54,8 @@ const Header = () => {
                 <li><Link to="/Hooks/UseForms" class="submain-link">Temporizador</Link></li>
                 <li><Link to="/Hooks/ContadorV2" class="submain-link">Contador v2</Link></li>
                 <li><Link to="/Hooks/Contexto" class="submain-link">Contexto</Link></li>
+                <li><Link to="/Hooks/UsandoRedux" class="submain-link">Redux!!!</Link></li>
+                <li><Link to="/Hooks/ReduxToolkit" class="submain-link">Redux Toolkit</Link></li>
               </ul>
             </li>
             <li><Link to="/ConsumiendoApi" class="main-link">Renderizado de API</Link></li>

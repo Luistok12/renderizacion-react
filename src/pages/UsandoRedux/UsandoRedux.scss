@@ -1,0 +1,10 @@
+#content-container{
+    margin:10px 0 0 0;
+    display: flex;
+    justify-content: center;
+
+    table thead th, table tbody td{
+        width: 100%;
+    }
+}
+

@@ -4,12 +4,20 @@ import Footer from './components/Footer/Footer';
 import AppRouter from './routes/router';
 import { useTheme } from './context/ThemeContext';
 
+// Importar estas 2 lineas para poder proveer Redux globalmente y asi poder encapsular el Provider a toda la app
+import { Provider } from 'react-redux';
+import storeProductos from '../src/redux/StoreProductos';
+
+
 function App() {
 
   const { isDarkMode } = useTheme();
 
   return (
-      <div className="App">
+
+    <div className="App">
+
+      <Provider store={storeProductos}>
 
         <Header />
 
@@ -19,11 +27,14 @@ function App() {
         </div>
 
         <Footer />
-      </div>
-      );
+
+      </Provider>
+
+    </div>
+  )
 }
 
-      export default App;
+export default App;
 
 // Para realizar push al repositorio de la pagina GitHub
 // git init

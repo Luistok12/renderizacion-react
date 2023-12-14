@@ -7,6 +7,8 @@ import Hooks from '../pages/Hooks/Hooks';
 import UR from '../pages/UseReducer/UseReducer';
 import UC from '../pages/useContext/useContext';
 import CA from '../pages/DobleAPI/ConsumiendoApi';
+import URedux from '../pages/UsandoRedux/UsandoRedux';
+import UReduxToolkit from '../pages/UsandoReduxToolkit/UsandoReduxToolkit';
 
 const AppRouter = () => {
     return (
@@ -19,6 +21,8 @@ const AppRouter = () => {
             <Route path="/Hooks/UseForms" Component={UF} />
             <Route path="/Hooks/ContadorV2" Component={UR} />
             <Route path="/Hooks/Contexto" Component={UC} />
+            <Route path="/Hooks/UsandoRedux" Component={URedux} />
+            <Route path="/Hooks/ReduxToolkit" Component={UReduxToolkit} />
             <Route path="/ConsumiendoApi" Component={CA} />
         </Routes>
     );

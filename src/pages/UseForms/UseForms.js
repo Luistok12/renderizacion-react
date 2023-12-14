@@ -7,7 +7,7 @@ const UseForms = () => {
     const [numero, setNumero] = useState(0);
     const [stoped, setStoped] = useState(false);
 
-    function incrementar (){
+    function incrementar() {
         setNumero(numero + 1);
     }
 
@@ -17,6 +17,7 @@ const UseForms = () => {
         if (stoped) {
             // setInterval (funcion en callback, unidad en milisegundos 1000ml = 1seg) => retorna un objeto ID
             const intervalId = setInterval(incrementar, 1000);
+
             // OJO! setInterval no es que te da los segundos, lo que hace es repetir una funcion cada tanto tiempo que se le asignes!
             console.log("numero de intervalId", intervalId);
 
